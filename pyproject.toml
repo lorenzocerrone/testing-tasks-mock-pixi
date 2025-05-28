@@ -10,12 +10,12 @@ source = "vcs"
 # read more about configuring hatch at:
 # https://hatch.pypa.io/latest/config/build/
 [tool.hatch.build.targets.wheel]
-packages = ["src/ilastik_tasks"]
+packages = ["src/mock_pixi_tasks"]
 
 
 # Project metadata (see https://peps.python.org/pep-0621)
 [project]
-name = "mock-pixi-tasks"
+name = "mock_pixi_tasks"
 dynamic = ["version"]
 description = "Mock package for pixi task collection"
 readme = "README.md"
@@ -23,15 +23,15 @@ license = { text = "BSD-3-Clause" }
 authors = [{ name = "Name Surname", email = "name.surname@example.org" }]
 
 # Required Python version and dependencies
-requires-python = "==3.11"
-dependencies = ["fractal-task-tools == 0.0.12", "numpy < 2"]
+requires-python = ">=3.11, <3.12"
+dependencies = ["fractal-task-tools == 0.0.12", "devtools < 2"]
 
 [tool.pixi.project]
 channels = ["conda-forge"]
 platforms = ["osx-arm64", "linux-64"]
 
 [tool.pixi.pypi-dependencies]
-mock-pixi-tasks = { path = ".", editable = true }
+mock_pixi_tasks = { path = ".", editable = true }
 
 [tool.pixi.environments]
 default = { solve-group = "default" }

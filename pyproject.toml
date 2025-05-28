@@ -24,7 +24,7 @@ authors = [{ name = "Name Surname", email = "name.surname@example.org" }]
 
 # Required Python version and dependencies
 requires-python = ">=3.11, <3.12"
-dependencies = ["fractal-task-tools == 0.0.12", "devtools < 2"]
+dependencies = ["fractal-task-tools == 0.0.12", "pydantic"]
 
 [tool.pixi.project]
 channels = ["conda-forge"]

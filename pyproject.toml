@@ -43,7 +43,7 @@ authors = [{ name = "Name Surname", email = "name.surname@example.org" }]
 
 # Required Python version and dependencies
 requires-python = ">=3.11, <3.12"
-dependencies = ["fractal-task-tools == 0.0.12", "pydantic"]
+dependencies = ["pydantic"]
 
 [tool.pixi.project]
 channels = ["conda-forge"]
@@ -54,3 +54,6 @@ mock_pixi_tasks = { path = ".", editable = true }
 
 [tool.pixi.environments]
 default = { solve-group = "default" }
+
+[tool.pixi.dependencies]
+fractal-task-tools = "0.0.12.*"
